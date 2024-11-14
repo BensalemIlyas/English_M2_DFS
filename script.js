@@ -9,7 +9,8 @@ const strengthsDescription = document.getElementById('strengths');
 const weaknessesDescription = document.getElementById('weaknesses');
 const achievementDescription = document.getElementById('achievement');
 const funFactDescription = document.getElementById('fun-fact');
-
+const ageDescription = document.getElementById('age');
+const placeOfBirthDescription = document.getElementById('place-of-birth');
 
 // Descriptions de chaque joueur
 const players = {
@@ -340,6 +341,8 @@ function showPlayerDescription(playerId) {
         weaknessesDescription.textContent = player.codingWeaknesses;
         achievementDescription.textContent = player.achievement;
         funFactDescription.textContent = player.funFact;
+        ageDescription.textContent = 'age: ' + player.age;
+        placeOfBirthDescription.textContent = 'from: '+  player.placeOfBirth;
         photoDescription.src = player.photo;
         photoDescription.alt = player.name;
         descriptionBox.classList.remove('hidden');
