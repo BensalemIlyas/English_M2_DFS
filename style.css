@@ -1,0 +1,158 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+}
+
+main {
+    flex: 1 1 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 2rem;
+
+}
+
+.card-container {
+    display: flex;
+    max-width: 7%;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+}
+
+/* Style de chaque card */
+.card {
+    width: 150px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    background-color: #f4f4f4;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card h3 {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.description {
+    position: fixed;
+    top: 0;
+    right: -33.33%; /* Start off-screen */
+    width: 33.33%;
+    height: 100%;
+    background-color: #333; /* Fond sombre */
+    color: #fff; /* Texte blanc */
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    transition: right 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    overflow-y: auto; /* Permet de faire défiler le texte si nécessaire */
+}
+
+.description.hidden {
+    right: -33.33%; /* Hidden state */
+}
+
+.description.visible {
+    right: 0; /* Show state */
+    padding:0;
+}
+
+.panel-title {
+    display: flex;            /* Active Flexbox */
+    justify-content: space-between; /* Aligne les éléments à gauche et à droite */
+    align-items: center;      /* Aligne les éléments au centre sur l'axe vertical */
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    background-color: #eb5656;
+}
+
+#player-name {
+    margin: 0;                /* Supprime les marges par défaut */
+    font-size: 24px;          /* Taille de la police pour le titre */
+}
+
+/* Style pour la croix de fermeture */
+.close-btn {
+    color: #fff;
+    font-size: 24px;          /* Taille de la police pour le titre */
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    transition: color 0.3s;  /* Animation douce pour la couleur */
+}
+.close-btn:hover {
+    color:  black;
+}
+
+.dimmer {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.main-description{
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+}
+
+h3{
+  font-size: 24px;
+}
+
+#title-strengths{
+    color: green;
+}
+
+#title-weaknesses{
+    color: #eb5656;
+}
+
+#title-achievement{
+    color: goldenrod;
+}
+
+#title-fun-fact{
+    color: blueviolet;
+}
